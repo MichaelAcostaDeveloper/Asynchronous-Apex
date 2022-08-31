@@ -15,5 +15,7 @@ public with sharing class ExampleQueueClass implements Queueable{
             lstContactToInsert.add(objContact);
         }
         insert lstContactToInsert;
+        //segunda version
+        System.enqueueJob(new ExampleQueueableChainingClass(lstContactToInsert));
     }
 }
